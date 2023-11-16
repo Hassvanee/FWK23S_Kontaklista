@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>Kontaktlista</title>
+</head>
+<body>
+  
+<div class="container mt-5">
+  
+
+  <!-- Formulär för att lägga till kontakt -->
+  <form id="addContactForm" class="form-inline mb-3">
+    <div class="form-group mr-2">
+      <input type="text" class="form-control" id="name" placeholder="Namn" required>
+      <div class="invalid-feedback">Fältet får inte vara tomt.</div>
+    </div>
+    <div class="form-group mr-2">
+      <input type="tel" class="form-control" id="phone" placeholder="Telefon" required>
+      <div class="invalid-feedback">Fältet får inte vara tomt och endast siffror är tillåtna.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Skapa</button>
+    <button type="button" class="btn btn-danger ml-2" id="deleteList">Radera lista</button>
+  </form>
+
+  <!-- Meddelande för tomma värden -->
+  <div id="emptyMessage" class="alert alert-danger mt-2" style="display: none; ">Fyll i både namn och telefon innan du sparar.</div>
+
+  <h1>Kontaktlista</h1>
+
+  <!-- Tabell för att visa kontakter--> 
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Namn</th>
+        <th scope="col">Telefon</th>
+        <th scope="col">Åtgärder</th>
+      </tr>
+    </thead>
+    <tbody id="contact-list-body">
+
+      <!-- Kontakter kommer att läggas till här dynamiskt med JavaScript -->
+    </tbody>
+  </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html> 
+
+
+
+
+ 
